@@ -43,7 +43,9 @@ $ sudo apt-get install gfortran libssl-dev libpcre3-dev \
 $ ./configure -all
 $ make -j4
 ```
-&emsp;上面的-j4表示使用4个核心同时编译.安装时间视你计算机性能而定，几分钟到几小时不等。
+&emsp;上面的 -all 表示安装ROOT所有的扩展包,实际上因为有些依赖可能未安装或者版本不正确，ROOT可能无法识别他们，导致并不能安装所有扩展包.在``./configure -all``结束后最下面几行，
+你可以查看真实情况下到底安装了哪些扩展包.
+如果你明确知道需要某个扩展包并且它不在上述enble的列表里，请参考官方手册或``./configure --help``查看详细内容。-j4表示使用4个核心同时编译.安装时间视计算机性能而定，几分钟到几小时不等。
 出现成功安装的提示内容后，需要运行一下配置脚本，输入如下命令即可:
 ```sh
 source /myROOTdir/bin/thisroot.sh
