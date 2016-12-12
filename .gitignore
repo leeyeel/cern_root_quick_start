@@ -1,2 +1,6 @@
-_book/*
-test/*
+#忽视或强调的文件
+
+#gitbook编译文件夹
+_book/
+#用于测试root脚本的目录
+test/
